@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+}
+
+.react-admin-title {
+  background-color: grey;
+}
+
+*{
+  background:#01959a03;
+}
