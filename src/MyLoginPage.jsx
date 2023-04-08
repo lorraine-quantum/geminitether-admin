@@ -3,28 +3,35 @@ import { useState } from 'react';
 import { useLogin, useNotify, Notification } from 'react-admin';
 
 const MyLoginPage = ({ theme }) => {
-    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const login = useLogin();
     const notify = useNotify();
 
     const handleSubmit = e => {
         e.preventDefault();
-        login({ email, password }).catch(() =>
+        login({ username, password }).catch(() =>
             notify('Invalid email or password')
         );
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='login-form' onSubmit={handleSubmit}>
+            <div className='title'>
+                <h1>Gemini.</h1>
+            </div>
             <input
-                name="email"
-                type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
+                name="username"
+                placeholder='username'
+                className='user-name'
+                type="text"
+                value={username}
+                onChange={e => setUsername(e.target.value)}
             />
             <input
+            className='pass-word'
                 name="password"
+                placeholder='password'
                 type="password"
                 value={password}
                 onChange={e => setPassword(e.target.value)}

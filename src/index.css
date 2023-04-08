@@ -1,7 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+}
 body {
   margin: 0;
+
+}
+.login-form{
+  position: absolute;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(45deg,
+  rgba(124, 125, 124, 0.356), rgba(155, 155, 155, 0.099)), url("https://images.unsplash.com/photo-1540809799-5da9372c3f64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3Rvb2x8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+  background-repeat: no-repeat;
+  background-size:auto 100%;
+  
 }
 
+.user-name{
+  outline: none;
+  border: none;
+  width: 200px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.334);
+}
+.pass-word{
+  outline: none;
+  border: none;
+  width: 200px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.366);
+}
+.login-form>button{
+  width: 200px;
+  height: 50px;
+color: white;
+border: none;
+outline: none;
+background-color: rebeccapurple;
+/* text-align: left; */
+
+}
+
+.title{
+  margin-bottom: 50px;
+}
 .react-admin-title {
   background-color: grey;
 }

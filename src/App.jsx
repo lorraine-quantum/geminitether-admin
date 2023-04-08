@@ -9,8 +9,8 @@ import green from '@mui/material/colors/green'
 
 import { TransactionList, TransactionEdit } from './transaction'
 import { WithdrawalList, WithdrawalEdit } from './withdrawal'
-const baseUrl = 'https://geminitetherchain.onrender.com';
-// const baseUrl = 'http://localhost:3000';
+// const baseUrl = 'https://geminitetherchain.onrender.com';
+const baseUrl = 'http://localhost:3000';
 import { fetchUtils } from 'react-admin';
 import simpleRestProvider from 'ra-data-simple-rest';
 
@@ -93,7 +93,7 @@ console.log(parent);
 const MyLayout = (props) => <Layout {...props} error={MyErr} />;
 
 const App = () => (
-  <Admin className="parent-o" theme={myTheme} layout={MyLayout} authProvider={authProvider} dataProvider={dataProvider} >
+  <Admin className="parent-o" loginPage={MyLoginPage} theme={myTheme} layout={MyLayout} authProvider={authProvider} dataProvider={dataProvider} >
     <Resource name="users" list={UserList} edit={UserEdit} icon={UserIcon} recordRepresentation="name" />
     <Resource name="transactions" list={TransactionList} icon={TransactionIcon} edit={TransactionEdit} />
     <Resource name="withdrawals" list={WithdrawalList} icon={WithdrawalIcon} edit={WithdrawalEdit} />
