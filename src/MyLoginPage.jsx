@@ -5,13 +5,18 @@ import { useLogin, useNotify, Notification } from 'react-admin';
 const MyLoginPage = ({ theme }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [loading,setLoading]= useState(false)
     const login = useLogin();
     const notify = useNotify();
-
-    const handleSubmit = e => {
+    const returnError=()=>{
+        notify("Invalid Credentials"),
+        setLoading(false)
+    }
+    const handleSubmit = async (e) =>  {
         e.preventDefault();
+        setLoading(true)
         login({ username, password }).catch(() =>
-            notify('Invalid email or password')
+            returnError()
         );
     };
 
@@ -37,7 +42,7 @@ const MyLoginPage = ({ theme }) => {
                 onChange={e => setPassword(e.target.value)}
                 
             />
-            <button type='submit'>submit</button>
+            <button className={loading?'loading':''} type='submit'>{loading?'Loading. . .':"submit"}</button>
         </form>
     );
 };

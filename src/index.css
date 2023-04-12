@@ -5,6 +5,9 @@
 button {
   cursor: pointer;
 }
+.loading{
+  opacity: 0.5;
+}
 body {
   margin: 0;
 
@@ -32,13 +35,23 @@ body {
   outline: none;
   border: none;
   width: 200px;
+  border-radius: 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.334);
 }
 .pass-word{
   outline: none;
   border: none;
+  border-radius: 0px;
   width: 200px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.366);
+}
+.pass-word::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+.user-name::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
 }
 .login-form>button{
   width: 200px;
