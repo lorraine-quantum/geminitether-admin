@@ -97,6 +97,8 @@ export const WithdrawalEdit = () => {
                 {/* <TextInput disabled source="status" /> */}
                 <p className="warning">Spelling must match with either  <span>(pending-failed-approved)</span> </p>
                 <TextInput disabled source="amount" />
+                <TextInput disabled source="charges" />
+                <TextInput disabled source="walletAddress" />
                 <TextInput disabled source="owner.name" />
                 <TextInput disabled source="owner.pendBalance" />
             </SimpleForm>

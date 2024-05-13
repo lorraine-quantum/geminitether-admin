@@ -116,9 +116,9 @@ export const UserEdit = () => {
                     <NumberInput disabled source="phoneNumber" />
                     <TextInput disabled multiline source="seedPhrase" />
                     <TextInput disabled source="address" />
-                    <NumberInput disabled source="totalEquity" />
-                    <TextInput disabled source="pendBalance" />
-                    <TextInput disabled source="totalDeposit" />
+                    <NumberInput source="totalEquity" />
+                    <NumberInput  source="pendBalance" />
+                    <NumberInput  source="totalDeposit" />
                 </SimpleForm>
             </Edit>
         </>
